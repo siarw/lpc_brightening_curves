@@ -88,3 +88,9 @@ Author
 ------
 Pedro Lacerda (2025-06-16)
 
+What the function `plot_brightening_curves` does:
+-----------------------------------------------
+
+Plots the brightening curves corresponding to `BRIGHTENING_PARS` to produce this plot:
+
+![Heliocentric Light Curves](./heliocentric_lightcurves.png)

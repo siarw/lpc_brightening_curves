@@ -1,7 +1,7 @@
 README
 ======
 
-What does the function `calc_total_heliocentric_mag` do?
+What does the function `calc_total_heliocentric_mag()` do?
 --------------------------------------------------------
 
 It calculates total heliocentric magnitude as a function of heliocentric
@@ -133,7 +133,7 @@ Author
 
 Pedro Lacerda (2025-06-16)
 
-What does the function `plot_heliocentric_lightcurves` do?
+What does the function `plot_heliocentric_lightcurves()` do?
 ----------------------------------------------------------
 
 It plots the heliocentric light curves corresponding to `BRIGHTENING_PARS` to

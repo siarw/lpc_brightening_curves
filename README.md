@@ -98,7 +98,7 @@ If you want to contribute suggestions, here is one way:
 2. **Clone and Edit the Forked Repository**.  Clone your fork to your computer:
 
 ```bash
-git clone https://github.com/<their-username>/<repository-name>.git
+git clone https://github.com/<your-username>/<repository-name>.git
 ```
 
 Create a new branch for your changes:

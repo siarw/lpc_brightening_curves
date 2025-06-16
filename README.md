@@ -67,9 +67,6 @@ Uses hardcoded values from dictionary `BRIGHTENING_PARS` structured as:
 
 Transition distance stored in `TRANSITION_R` (3.16 au).
 
-Function `plot_brightening_curves` plots the brightening curves corresponding to 
-`BRIGHTENING_PARS`.
-
 References
 ----------
 If you use this function, please cite:  

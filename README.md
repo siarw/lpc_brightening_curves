@@ -1,37 +1,36 @@
 README
 ======
 
-What the function `total_heliocentric_mag` does
------------------------------------------------
+What does the function `calc_total_heliocentric_mag` do?
+--------------------------------------------------------
 
-Calculates total heliocentric magnitude as a function of heliocentric
-distance, separated by orbital arc and Oort group. The brightening
-parameters, currently hardcoded into dictionary `BRIGHTENING_PARS`, are
-median values for a sample of over 200 comets. See Lacerda et al. (2025)
-for details.  
+It calculates total heliocentric magnitude as a function of heliocentric
+distance, separated by orbital arc and Oort group. The brightening parameters,
+currently hardcoded into dictionary `BRIGHTENING_PARS`, are median values for a
+sample of over 200 comets. See Lacerda et al. (2025) for details.  
 
 Usage
-------
+-----
 
 ```python
-total_heliocentric_mag(distance, orbital_arc, oort_group)
+calc_total_heliocentric_mag(distance, orbital_arc, oort_group)
 ```
 
 Examples
 ---------
 
 ```python
->>> print(total_heliocentric_mag(5.0, "inbound", "new"))
+>>> print(calc_total_heliocentric_mag(5.0, "inbound", "new"))
 output:  14.20233223070413
 ```
 
 ```python
->>> print(total_heliocentric_mag([1.0, 3.0, 10.0], "inbound", "new"))
+>>> print(calc_total_heliocentric_mag([1.0, 3.0, 10.0], "inbound", "new"))
 output:  [ 8.28       11.49031036 18.06966458]
 ```
 
 ```python
->>> print(total_heliocentric_mag([2.3, 3.7], "outbound", "old"))
+>>> print(calc_total_heliocentric_mag([2.3, 3.7], "outbound", "old"))
 output:  [16.34842471 19.07594477]
 ```
 
@@ -89,17 +88,18 @@ Implement user-specified parameters and transition distance.
 Dependencies
 ------------
 
-numpy  
-typing if python_version < '3.5'
+- numpy  
+- typing if python_version < '3.5'
 
 Author
 ------
 
 Pedro Lacerda (2025-06-16)
 
-What the function `plot_brightening_curves` does
------------------------------------------------
+What does the function `plot_heliocentric_lightcurves` do?
+----------------------------------------------------------
 
-Plots the brightening curves corresponding to `BRIGHTENING_PARS` to produce this plot:
+It plots the brightening curves corresponding to `BRIGHTENING_PARS` to produce
+this plot:
 
 ![Heliocentric Light Curves](./heliocentric_lightcurves.png)

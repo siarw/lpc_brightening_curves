@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from total_heliocentric_mag import total_heliocentric_mag
+from calc_total_heliocentric_mag import calc_total_heliocentric_mag
 
 OORT_GROUPS = ["new", "int", "old"]
 OORT_LINESTYLES = {
@@ -52,13 +52,13 @@ def plot_heliocentric_lightcurves():
     for i, og in enumerate(oort_groups):
         ax_inbound.plot(
             x,
-            total_heliocentric_mag(r, "inbound", og),
+            calc_total_heliocentric_mag(r, "inbound", og),
             **oort_linestyles[i],
             label=oort_labels[i],
         )
         ax_outbound.plot(
             x,
-            total_heliocentric_mag(r, "outbound", og),
+            calc_total_heliocentric_mag(r, "outbound", og),
             **oort_linestyles[i],
             label=oort_labels[i],
         )
@@ -78,7 +78,7 @@ def plot_heliocentric_lightcurves():
             r"$%.1f$" % oort_gr_inbound_kr_near[i],
             (
                 (x_ins_mid := (x_near[0] + x_near[-1]) / 2),
-                total_heliocentric_mag(10**x_ins_mid, "inbound", og),
+                calc_total_heliocentric_mag(10**x_ins_mid, "inbound", og),
             ),
             **annotate_opt_dict,
         )
@@ -86,7 +86,7 @@ def plot_heliocentric_lightcurves():
             r"$%.1f$" % oort_gr_inbound_kr_far[i],
             (
                 x_out_mid := (x_far[0] + x_far[-1]) / 2,
-                total_heliocentric_mag(10**x_out_mid, "inbound", og),
+                calc_total_heliocentric_mag(10**x_out_mid, "inbound", og),
             ),
             **annotate_opt_dict,
         )
@@ -94,7 +94,7 @@ def plot_heliocentric_lightcurves():
             r"$%.1f$" % oort_gr_outbound_k1[i],
             (
                 (x_all_dist_mid := (x[0] + x[-1]) / 2),
-                total_heliocentric_mag(10**x_all_dist_mid, "outbound", og),
+                calc_total_heliocentric_mag(10**x_all_dist_mid, "outbound", og),
             ),
             **annotate_opt_dict,
         )

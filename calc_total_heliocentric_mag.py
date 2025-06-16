@@ -4,7 +4,7 @@ from typing import Iterable, Union
 import numpy as np
 
 
-def total_heliocentric_mag(
+def calc_total_heliocentric_mag(
     distance: Union[float, Iterable[float]],
     orbital_arc: str = "inbound",
     oort_group: str = "new",
@@ -12,7 +12,7 @@ def total_heliocentric_mag(
     """Calculate total heliocentric magnitude as function of heliocentric distance.
 
     Separates calculation by orbital arc and Oort group using median brightening
-    parameters from a sample of 200+ comets.
+    parameters from a sample of 200+ comets. See Lacerda et al. 2025 for details.
 
     Parameters
     ----------
@@ -139,15 +139,19 @@ for details.  """,
     print("Examples:")
     print("---------")
     print(""">>> print(total_heliocentric_mag(5.0, "inbound", "new"))""")
-    print("output: ", total_heliocentric_mag(5.0, "inbound", "new"), end="\n\n")
+    print("output: ", calc_total_heliocentric_mag(5.0, "inbound", "new"), end="\n\n")
     print(""">>> print(total_heliocentric_mag([1.0, 3.0, 10.0], "inbound", "new"))""")
     print(
         "output: ",
-        total_heliocentric_mag([1.0, 3.0, 10.0], "inbound", "new"),
+        calc_total_heliocentric_mag([1.0, 3.0, 10.0], "inbound", "new"),
         end="\n\n",
     )
     print(""">>> print(total_heliocentric_mag([2.3, 3.7], "outbound", "old"))""")
-    print("output: ", total_heliocentric_mag([2.3, 3.7], "outbound", "old"), end="\n\n")
+    print(
+        "output: ",
+        calc_total_heliocentric_mag([2.3, 3.7], "outbound", "old"),
+        end="\n\n",
+    )
 
 
 if __name__ == "__main__":
